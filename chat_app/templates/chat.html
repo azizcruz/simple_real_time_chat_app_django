@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="banner">
+  <div class="display-username">You are: {{ username }}</div>
+</div>
+
+<div id="messages_canvas" class="messages-canvas"></div>
+
+  <form id="chat_form" class="chat-form-2" action="" method="post">
+    {% csrf_token %}
+    <input type="hidden" name="username" value="{{ username }}">
+    <div class="typing-sending-wrapper">
+      <input type="text" name="msg" id="msg-field" value="" autocomplete="off">
+      <button type="submit" id="send-btn" class="btn">send</button>
+    </div>
+  </form>
+{% endblock content %}
+{% block  plugins %}
+  <script src="{% static "js/plugins.js" %}" charset="utf-8"></script>
+{% endblock %}

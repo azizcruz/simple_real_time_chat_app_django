@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <form class="chat-form" action="{% url 'chatroom' %}" method="post">
+    {% csrf_token %}
+    <input type="text" name="username" value="" placeholder="Enter your user name...">
+    <button type="submit" class="btn" name="send_msg">start chat</button>
+  </form>
+{% endblock content %}

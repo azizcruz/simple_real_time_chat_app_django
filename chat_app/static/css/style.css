@@ -1,0 +1,23 @@
+.sender {
+  border-top: 1px dashed #ccc;
+}
+
+.banner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.messages-canvas {
+  max-height: 71vh;
+  min-height: 71vh;
+  overflow-y: scroll;
+}
+
+input {
+  color: #000;
+}
+.msg-field {
+  background-color: #F00;
+}
